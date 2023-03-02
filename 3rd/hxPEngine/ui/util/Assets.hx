@@ -3,12 +3,10 @@ package hxPEngine.ui.util;
 import hxPEngine.ui.loader.parser.BaseParser;
 import hxPEngine.ui.loader.parser.AssetsType;
 import hxPEngine.ui.loader.parser.AtlasParser;
-
 import hxPEngine.ui.loader.LoaderAssets;
 import hxd.BitmapData;
 import hxd.res.Image;
 import hxd.clipper.Rect;
-
 import hxPEngine.ui.loader.parser.XMLAtlas;
 import h3d.mat.Texture;
 import hxd.fmt.hmd.Library;
@@ -18,17 +16,16 @@ import haxe.Exception;
 import haxe.io.Bytes;
 import hxd.res.Sound;
 import hxd.res.Atlas;
-//import hxPEngine.ui.display.Label;
+// import hxPEngine.ui.display.Label;
 import hxPEngine.ui.display.Label;
 import h2d.Font;
-
 
 using Reflect;
 
 /**
  * 资源管理器
  */
- class Assets {
+class Assets {
 	/**
 	 * 加载最大线程
 	 */
@@ -95,10 +92,18 @@ using Reflect;
 	}
 
 	/**
+	 * 加载一个解析器
+	 * @param parser 
+	 */
+	public function loadParser(parser:BaseParser):Void {
+		_loadlist.push(parser);
+	}
+
+	/**
 	 * 加载单个fbx
 	 * @param file 
 	 */
-	 public function loadFbx(file:String):Void {
+	public function loadFbx(file:String):Void {
 		var ext = StringUtils.getExtType(file);
 		for (parser in LoaderAssets.fileparser) {
 			var bool = parser.callMethod(parser.getProperty("support"), [ext]);
@@ -227,7 +232,7 @@ using Reflect;
 	 * @return Dynamic
 	 */
 	public function getTypeAssets(type:AssetsType, name:String):Any {
- 		if (_loadedData.exists(type)) {
+		if (_loadedData.exists(type)) {
 			return _loadedData.get(type).get(name);
 		}
 		return null;
@@ -311,27 +316,27 @@ using Reflect;
 	 * @param id 
 	 * @return Object
 	 */
-	 public function create3DModel(id:String):Object {
+	public function create3DModel(id:String):Object {
 		var hmd = getHMDLibrary(id);
 		if (hmd != null) {
 			return hmd.makeObject((path) -> {
-				path = StringTools.replace(path, ".png", "");
+				// 这里直接使用全路径
 				return AssetsBuilder.getTexture3D(path);
 			});
 		}
 		return null;
 	}
 
-		/**
+	/**
 	 * 加载fbx模型
 	 * @param id 
 	 * @return Object
 	 */
-	 public function loadFbxModel(id:String):Object {
+	public function loadFbxModel(id:String):Object {
 		var hmd = getHMDLibrary(id);
 		if (hmd != null) {
 			return hmd.makeObject((path) -> {
-				return AssetsBuilder.getTexture3D(id + ":" + StringUtils.getName(path));
+				return AssetsBuilder.getTexture3D(path);
 			});
 		}
 		return null;
