@@ -94,6 +94,21 @@ using Reflect;
 		}
 	}
 
+	/**
+	 * 加载单个fbx
+	 * @param file 
+	 */
+	 public function loadFbx(file:String):Void {
+		var ext = StringUtils.getExtType(file);
+		for (parser in LoaderAssets.fileparser) {
+			var bool = parser.callMethod(parser.getProperty("support"), [ext]);
+			if (bool) {
+				_loadlist.push(Type.createInstance(parser, [addRepath(file)]));
+				break;
+			}
+		}
+	}
+
 	/** 
 		加载精灵图
 	**/
@@ -296,12 +311,27 @@ using Reflect;
 	 * @param id 
 	 * @return Object
 	 */
-	public function create3DModel(id:String):Object {
+	 public function create3DModel(id:String):Object {
 		var hmd = getHMDLibrary(id);
 		if (hmd != null) {
 			return hmd.makeObject((path) -> {
 				path = StringTools.replace(path, ".png", "");
 				return AssetsBuilder.getTexture3D(path);
+			});
+		}
+		return null;
+	}
+
+		/**
+	 * 加载fbx模型
+	 * @param id 
+	 * @return Object
+	 */
+	 public function loadFbxModel(id:String):Object {
+		var hmd = getHMDLibrary(id);
+		if (hmd != null) {
+			return hmd.makeObject((path) -> {
+				return AssetsBuilder.getTexture3D(id + ":" + StringUtils.getName(path));
 			});
 		}
 		return null;

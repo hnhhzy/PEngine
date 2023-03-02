@@ -1,3 +1,4 @@
+import hxPEngine.ui.util.StringUtils;
 import hxd.res.Loader;
 import hxPEngine.ui.util.AssetsBuilder;
 import haxe.io.Bytes;
@@ -72,23 +73,43 @@ class MainJS extends hxd.App {
 
         var assets = new Assets(); 
         AssetsBuilder.bindAssets(assets);
-        assets.loadFile("res/img/skeleton01.png");
-        assets.loadFile("res/img/sword01.png");
-        assets.loadFile("res/img/model.hmd");
+        //assets.loadFile("res/img/skeleton01.png");
+        //assets.loadFile("res/img/sword01.png");
+        //assets.loadFile("res/img/model.hmd");
+        assets.loadFile(StringTools.replace(this.url, "\\", "/"));
         assets.start(function(f) {
             if (f == 1) {
                 trace('loading over');
-                
+                /*
+                var hmd = assets.getHMDLibrary("Model");
+                //for(var i in hmd.header.materials) {
+                var path = StringTools.replace(this.url, "\\", "/");
+                var fileName = StringUtils.getName(path);
+                var fileExt = StringUtils.getExtType(path);
+                path = StringTools.replace(path, fileName + "." + fileExt, "");
+                for (pass in hmd.header.materials) {
+                    assets.loadFile(path + "/" + StringTools.replace(pass.diffuseTexture, "\\", "/"));
+                }
+                assets.start(function(k) {
+                    if (k == 1) {
+                       
+
+                    }
+                });
+                */
+
+                var path = StringTools.replace(this.url, "\\", "/");
+                var fileName = StringUtils.getName(path);
                 cache = new h3d.prim.ModelCache();
-        
-                var obj = assets.create3DModel("model");
+                  
+                var obj = assets.loadFbxModel(fileName);
                 
                 //var obj = cache.loadModel(hxd.Res.img.Model);
                 obj.scale(0.1);
                 s3d.addChild(obj);
                 s3d.camera.pos.set( -3, -5, 3);
                 s3d.camera.target.z += 1;
-                obj.playAnimation(assets.getHMDAnimation("model"));
+                obj.playAnimation(assets.getHMDAnimation(fileName));
                 //obj.playAnimation(cache.loadAnimation(hxd.Res.img.model));
         
         
@@ -106,6 +127,7 @@ class MainJS extends hxd.App {
                 dir.enableSpecular = true;
         
                 new h3d.scene.CameraController(s3d).loadFromCamera();
+                
                 
             }
         });
@@ -169,6 +191,6 @@ class MainJS extends hxd.App {
 
     }
     static function main() {
-       // new MainJS('I:\\Myproject\\HeapsPlus\\PEngine\\res\\img\\model.fbx');
+        new MainJS('E:\\MarkProject\\HeapsPlus\\heapsProject\\art_resource\\model\\monster\\goblin\\Model.FBX');
     }
 }

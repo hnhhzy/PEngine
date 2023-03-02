@@ -1,7 +1,7 @@
 -cp src
 -cp 3rd
 -lib heaps
--lib hlsdl
+#-lib hlsdl
 #-lib hldx
 -lib domkit
 -lib actuate
@@ -11,11 +11,11 @@
 
 #--macro domkit.Macros.checkCSS('res/style.css')
 
--hl PEngine.hl
-#-js PEngine.js
+#-hl PEngine.hl
+-js PEngine.js
 
 #-main Main
--main Main
+-main MainJS
 #-main Domkit
 -D windowSize=1366x768
 
