@@ -58,7 +58,7 @@ class MainJS extends hxd.App {
         c.originalFilename = "model.fbx";
         c.srcPath = this.url;
         c.srcBytes = sys.io.File.getBytes(this.url);
-        c.dstPath = StringTools.replace(this.url.toLowerCase(), ".fbx", ".hmd");
+        c.dstPath = StringTools.replace(this.url, "." + StringUtils.getExtType(this.url), ".hmd");
         c.convert();
         trace("FBX2HDM:", c.dstPath);
         #end
