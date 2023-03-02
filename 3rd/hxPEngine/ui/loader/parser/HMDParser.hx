@@ -61,6 +61,7 @@ class HMDParser extends BaseParser {
 						var map = @:privateAccess assets._loadedData.get(BITMAP);
 						if (map != null) {
 							for (value in map) {
+								_setName = value.getName();
 								this.out(this, BITMAP, value, 0);
 							};
 							_setName = null;
