@@ -60,8 +60,8 @@ class HMDParser extends BaseParser {
 						// 使用HMDid返回
 						var map = @:privateAccess assets._loadedData.get(BITMAP);
 						if (map != null) {
-							for (value in map) {
-								_setName = value.getName();
+							for (key => value in map) {
+								_setName = key;
 								this.out(this, BITMAP, value, 0);
 							};
 							_setName = null;
