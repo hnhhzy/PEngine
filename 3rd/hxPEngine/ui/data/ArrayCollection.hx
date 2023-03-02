@@ -1,19 +1,19 @@
 package hxPEngine.ui.data;
 
-class ArrayCollection<T> {
-	public var source:Array<T> = [];
+class ArrayCollection<Dynamic> {
+	public var source:Array<Dynamic> = [];
 
-	public function new(array:Array<T>) {
+	public function new(array:Array<Dynamic>) {
 		this.source = array;
 	}
 
-	public function add(data:T):Void {
+	public function add(data:Dynamic):Void {
 		this.source.push(data);
 		if (onChange != null)
 			this.onChange();
 	}
 
-	public function remove(data:T):Void {
+	public function remove(data:Dynamic):Void {
 		this.source.remove(data);
 		if (onChange != null)
 			this.onChange();

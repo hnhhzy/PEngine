@@ -2,6 +2,7 @@ package hxPEngine.ui.base;
 
 import h2d.Tile;
 import h2d.Object;
+import hxPEngine.ui.display.Image;
 
 inline function getWidth(display:IDisplayObject):Float {
 	if (display.width == null) {
@@ -25,12 +26,12 @@ inline function getHeight(display:IDisplayObject):Float {
  * @return IDisplayObject
  */
 inline function convertIDisplayObject(data:Dynamic, ?parent:Object):IDisplayObject {
-	// if (data is Tile || data is String) {
-	// 	var img = new Image(data, parent);
-	// 	if (parent != null)
-	// 		parent.addChild(cast img);
-	// 	return img;
-	// }
+	if (data is Tile || data is String) {
+		var img = new Image(data, parent);
+		if (parent != null)
+			parent.addChild(cast img);
+		return img;
+	}
 	if (data is IDisplayObject) {
 		if (parent != null)
 			parent.addChild(cast data);

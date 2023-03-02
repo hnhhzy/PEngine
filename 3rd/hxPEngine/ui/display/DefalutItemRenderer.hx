@@ -1,6 +1,6 @@
 package hxPEngine.ui.display;
 import hxPEngine.ui.data.ObjectRecycler;
-import hxPEngine.ui.base.Label;
+import hxPEngine.ui.display.Label;
 import hxd.Event;
 import haxe.Json;
 import h2d.Object;

@@ -18,7 +18,8 @@ import haxe.Exception;
 import haxe.io.Bytes;
 import hxd.res.Sound;
 import hxd.res.Atlas;
-import hxPEngine.ui.base.Label;
+//import hxPEngine.ui.display.Label;
+import hxPEngine.ui.display.Label;
 import h2d.Font;
 
 
@@ -299,8 +300,17 @@ using Reflect;
 		var hmd = getHMDLibrary(id);
 		if (hmd != null) {
 			return hmd.makeObject((path) -> {
+				path = StringTools.replace(path, ".png", "");
 				return AssetsBuilder.getTexture3D(path);
 			});
+		}
+		return null;
+	}
+
+	public function getHMDAnimation(id:String):h3d.anim.Animation {
+		var hmd = getHMDLibrary(id);
+		if (hmd != null) {
+			return hmd.loadAnimation();
 		}
 		return null;
 	}

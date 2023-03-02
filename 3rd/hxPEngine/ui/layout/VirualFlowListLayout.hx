@@ -8,6 +8,10 @@ import hxPEngine.ui.display.ItemRenderer;
  * 注意事项：虚拟布局是使用相同的宽度、高度进行计算，如果使用虚拟布局，请确保所有的宽度、高度是一样的。
  */
  class VirualFlowListLayout extends ListLayout {
+
+	public var gapX:Float = 0;
+	public var gapY:Float = 0;
+
 	override function updateListLayout(list:ListView, recycler:ObjectRecycler<Dynamic>) {
 		super.updateListLayout(list, recycler);
 		list.enableHorizontalScroll = false;
@@ -48,9 +52,11 @@ import hxPEngine.ui.display.ItemRenderer;
 				item.y = offestY;
 				item.x = offestX;
 				list.addChild(item);
+				offestX += gapX;
 				offestX += item.contentWidth;
 				startIndex++;
 			}
+			offestY += gapY;
 			offestY += item.contentHeight;
 			visibleYLen--;
 		}
