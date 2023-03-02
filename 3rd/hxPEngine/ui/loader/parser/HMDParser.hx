@@ -38,32 +38,37 @@ class HMDParser extends BaseParser {
 			}
 			for (material in hmd.header.materials) {
 				if (material.diffuseTexture != null && !checkExist(rootName, material.diffuseTexture)) {
-					pushToList(rootPath + material.diffuseTexture);
+					pushToList(material.diffuseTexture);
 				}
 				if (material.specularTexture != null && !checkExist(rootName, material.specularTexture)) {
-					pushToList(rootPath + material.specularTexture);
+					pushToList(material.specularTexture);
 				}
 				if (material.normalMap != null && !checkExist(rootName, material.normalMap)) {
-					pushToList(rootPath + material.normalMap);
+					pushToList(material.normalMap);
 				}
 			}
-			for (file in pngs) {
-				assets.loadParser(new HMDTextureParser(file));
-			}
-			assets.start((f) -> {
-				if (f == 1) {
-					// 使用HMDid返回
-					var map = @:privateAccess assets._loadedData.get(BITMAP);
-					if (map != null) {
-						for (key => value in map) {
-							_setName = rootName + ":" + key;
-							this.out(this, BITMAP, value, 0);
-						};
-						_setName = null;
-						this.out(this, HMD, hmd, 1);
+			if (pngs.length > 0) {
+				for (file in pngs) {
+					var parser = new HMDTextureParser(rootPath + file);
+					parser.assetsId = file;
+					assets.loadParser(parser);
+				}
+				assets.start((f) -> {
+					if (f == 1) {
+						// 使用HMDid返回
+						var map = @:privateAccess assets._loadedData.get(BITMAP);
+						if (map != null) {
+							for (value in map) {
+								this.out(this, BITMAP, value, 0);
+							};
+							_setName = null;
+							this.out(this, HMD, hmd, 1);
+						}
 					}
-				}
-			});
+				});
+			} else {
+				this.out(this, HMD, hmd, 1);
+			}
 		}, error);
 	}
 
@@ -86,8 +91,12 @@ class HMDParser extends BaseParser {
  * HMD加载的图片希望使用原生路径，以便资源复用
  */
 class HMDTextureParser extends BitmapDataParser {
+	public var assetsId:String = null;
+
 	override function getName():String {
 		// 这里直接返回路径
-		return this.getData();
+		assetsId = StringTools.replace(assetsId, ".", "_");
+		assetsId = StringTools.replace(assetsId, "/", "_");
+		return assetsId;
 	}
 }

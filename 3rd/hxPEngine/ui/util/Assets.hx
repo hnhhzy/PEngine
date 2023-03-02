@@ -321,6 +321,8 @@ class Assets {
 		if (hmd != null) {
 			return hmd.makeObject((path) -> {
 				// 这里直接使用全路径
+				path = StringTools.replace(path, ".", "_");
+				path = StringTools.replace(path, "/", "_");
 				return AssetsBuilder.getTexture3D(path);
 			});
 		}
@@ -336,6 +338,8 @@ class Assets {
 		var hmd = getHMDLibrary(id);
 		if (hmd != null) {
 			return hmd.makeObject((path) -> {
+				path = StringTools.replace(path, ".", "_");
+				path = StringTools.replace(path, "/", "_");
 				return AssetsBuilder.getTexture3D(path);
 			});
 		}

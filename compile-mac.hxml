@@ -23,4 +23,4 @@
 
 #-dce no
 #-debug
--D mac
+-D mac_run

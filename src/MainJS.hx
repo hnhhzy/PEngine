@@ -191,7 +191,7 @@ class MainJS extends hxd.App {
 
     }
     static function main() {
-        #if mac
+        #if mac_run
         new MainJS('res/img/model.fbx');
         #else
         new MainJS('E:\\MarkProject\\HeapsPlus\\heapsProject\\art_resource\\model\\monster\\goblin\\Model.FBX');
