@@ -1,0 +1,5 @@
+--library hxcpp
+--main MacRunTest
+--cpp bin/cpp
+# 直接使用hl命令行
+-D hl_command

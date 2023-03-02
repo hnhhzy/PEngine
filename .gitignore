@@ -3,3 +3,5 @@ PEngine.js
 PEngine.hl
 out
 .tmp
+.DS_Store
+bin
