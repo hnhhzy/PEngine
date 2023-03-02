@@ -1,5 +1,6 @@
 package hxPEngine.ui.loader.parser;
 
+import hxPEngine.ui.util.StringUtils;
 import hxPEngine.ui.util.AssetsBuilder;
 import hxPEngine.ui.util.Assets;
 import hxd.res.Model;
@@ -19,9 +20,10 @@ class HMDParser extends BaseParser {
 
 	override function process() {
 		var path:String = getData();
-		path = path.toLowerCase();
-		if (StringTools.endsWith(path, ".fbx"))
-			path = StringTools.replace(path, ".fbx", ".hmd");
+		if (StringUtils.getExtType(path).toLowerCase() == "fbx") {
+			var fileExt = StringUtils.getExtType(path);
+			path = StringTools.replace(path, "." + fileExt, ".hmd");
+		}
 		AssetsUtils.loadBytes(path, function(data) {
 			var fs = new BytesFileEntry(path, data);
 			var m = new Model(fs);
