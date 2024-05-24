@@ -1,0 +1,65 @@
+{
+    "role":"老鼠",
+    "animation": {
+        "images":[
+            {
+				"name":"攻击",
+                "type":"images",
+                "data":[
+                    "res/role/image0.png",
+                    "res/role/image1.png",
+                    "res/role/image2.png",
+                    "res/role/image3.png",
+                    "res/role/image4.png"
+                ]        
+            }
+        ],
+        "segmentation":[
+            {
+				"name":"dandan",
+                "type":"segmentation",
+                "src":"res/role/dandan.png",
+                "data":[
+                    {
+                        "x":0,
+                        "y":0,
+                        "width":391,
+                        "height":428
+                    },
+                    {
+                        "x":391,
+                        "y":0,
+                        "width":391,
+                        "height":428
+                    },
+                    {
+                        "x":782,
+                        "y":0,
+                        "width":391,
+                        "height":428
+                    },
+                    {
+                        "x":0,
+                        "y":428,
+                        "width":391,
+                        "height":428
+                    },
+                    {
+                        "x":391,
+                        "y":428,
+                        "width":391,
+                        "height":428
+                    },
+                    {
+                        "x":782,
+                        "y":428,
+                        "width":391,
+                        "height":428
+                    }
+                
+                ]
+            }
+        ]
+
+    }
+}

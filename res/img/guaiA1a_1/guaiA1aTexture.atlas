@@ -1,0 +1,27 @@
+
+guaiA1aTexture_1.png
+size: 125,104
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+guaiA1a_1/guaiA1a_head
+  rotate: false
+  xy: 2, 2
+  size: 94, 102
+  orig: 94, 102
+  offset: 0, 0
+  index: -1
+guaiA1a_1/guaiA1a_legL
+  rotate: false
+  xy: 98, 29
+  size: 27, 36
+  orig: 27, 36
+  offset: 0, 0
+  index: -1
+guaiA1a_1/guaiA1a_legR
+  rotate: false
+  xy: 98, 67
+  size: 27, 37
+  orig: 27, 37
+  offset: 0, 0
+  index: -1

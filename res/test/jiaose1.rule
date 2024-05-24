@@ -1,0 +1,1879 @@
+{
+	
+    "role": "老鼠",
+	"scaleX":1,
+	"scaleY":1,
+    "animation": [
+        {
+            "name": "zou",
+            "direction_number": "2",
+			"defaulaction":false,
+            "data": [
+			
+               
+                {
+                    "src": "res/role/dandan.png",
+                    "type": "segmentation",
+                    "direction": "2",
+					"carousel": true,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":1,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":2,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[90],
+					"down":2,
+                    "data": [
+                        {
+							"x":0,
+							"y":0,
+							"width":391,
+							"height":428,
+							"positionX":0,
+							"positionY":0
+						},
+						{
+							"x":391,
+							"y":0,
+							"width":391,
+							"height":428,
+							"positionX":0,
+							"positionY":0
+						},
+						{
+							"x":782,
+							"y":0,
+							"width":391,
+							"height":428,
+							"positionX":0,
+							"positionY":0
+						},
+						{
+							"x":0,
+							"y":428,
+							"width":391,
+							"height":428,
+							"positionX":0,
+							"positionY":0
+						},
+						{
+							"x":391,
+							"y":428,
+							"width":391,
+							"height":428,
+							"positionX":0,
+							"positionY":0
+						},
+						{
+							"x":782,
+							"y":428,
+							"width":391,
+							"height":428,
+							"positionX":10,
+							"positionY":10
+						}
+                    ]
+                },
+				{
+                    "src": "res/role/dandan2.png",
+                    "type": "segmentation",
+                    "direction": "3",
+					"carousel": true,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[],
+					"down":2,
+                    "data": [
+                        {
+							"x":0,
+							"y":0,
+							"width":391,
+							"height":428,
+							"positionX":30,
+							"positionY":30
+						},
+						{
+							"x":391,
+							"y":0,
+							"width":391,
+							"height":428,
+							"positionX":30,
+							"positionY":30
+						},
+						{
+							"x":782,
+							"y":0,
+							"width":391,
+							"height":428,
+							"positionX":30,
+							"positionY":30
+						},
+						{
+							"x":0,
+							"y":428,
+							"width":391,
+							"height":428,
+							"positionX":30,
+							"positionY":30
+						},
+						{
+							"x":391,
+							"y":428,
+							"width":391,
+							"height":428,
+							"positionX":30,
+							"positionY":30
+						},
+						{
+							"x":782,
+							"y":428,
+							"width":391,
+							"height":428,
+							"positionX":30,
+							"positionY":30
+						}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "tiao",
+            "direction_number": "8",
+			"defaulaction":true,
+			"defauldirection":3,
+            "data": [
+                
+				
+				{
+                    "direction": "1",
+                    "type": "images",
+					"carousel": false,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":2,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":2,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[],
+                    "data": [
+						{
+							"positionX":0,
+							"positionY":0,
+							"url":"res/test/01/00000.png"
+						},
+						{
+							"positionX":0,
+							"positionY":0,
+							"url":"res/test/01/00001.png"
+						},
+						{
+							"positionX":0,
+							"positionY":0,
+							"url":"res/test/01/00002.png"
+						},
+						{
+							"positionX":0,
+							"positionY":0,
+							"url":"res/test/01/00003.png"
+						}
+                        
+                    ]
+                },
+				{
+                    "direction": "2",
+                    "type": "images",
+					"carousel": true,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":3,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[],
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00010.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00011.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00012.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00013.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "3",
+                    "type": "images",
+					"carousel": true,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":1,
+					"collisionproperty":{
+						"x":0,
+						"y":0,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":0,
+						"y":0,
+						"width":100,
+						"height":100
+					},
+					"keys":[],
+                    "data": [
+                        {
+							"positionX":-20,
+							"positionY":-20,
+							"url":"res/test/01/00020.png"
+						},
+						{
+							"positionX":-20,
+							"positionY":-20,
+							"url":"res/test/01/00021.png"
+						},
+						{
+							"positionX":-20,
+							"positionY":-20,
+							"url":"res/test/01/00022.png"
+						},
+						{
+							"positionX":-20,
+							"positionY":-20,
+							"url":"res/test/01/00023.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "4",
+                    "type": "images",
+					"carousel": true,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[],
+					"down":1,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00030.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00031.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00032.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00033.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "5",
+                    "type": "images",
+					"carousel": true,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[],
+					"down":1,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00040.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00041.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00042.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00043.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "6",
+                    "type": "images",
+					"carousel": true,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[],
+					"down":1,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00050.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00051.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00052.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00053.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "7",
+                    "type": "images",
+					"carousel": true,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[],
+					"down":1,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00060.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00061.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00062.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00063.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "8",
+                    "type": "images",
+					"carousel": true,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[],
+					"down":1,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00070.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00071.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00072.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00073.png"
+						}
+                    ]
+                }
+            ]
+        },
+		{
+            "name": "pao",
+            "direction_number": "8",
+			"defaulaction":false,
+            "data": [
+                {
+                    "direction": "1",
+                    "type": "images",
+					"carousel": false,
+					"rate": 15,
+					"defaulaction":true,
+					"collision":1,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":2,
+					"maskproperty":{
+						"x":20,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[87],
+					"down":2,
+                    "data": [
+                        {
+							"positionX":10,
+							"positionY":10,
+							"url":"res/test/01/00080.png"
+						},
+						{
+							"positionX":10,
+							"positionY":10,
+							"url":"res/test/01/00081.png"
+						},
+						{
+							"positionX":10,
+							"positionY":10,
+							"url":"res/test/01/00082.png"
+						},
+						{
+							"positionX":10,
+							"positionY":10,
+							"url":"res/test/01/00083.png"
+						},
+						{
+							"positionX":10,
+							"positionY":10,
+							"url":"res/test/01/00084.png"
+						},
+						{
+							"positionX":10,
+							"positionY":10,
+							"url":"res/test/01/00085.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "2",
+                    "type": "images",
+					"carousel": false,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[87,68],
+					"down":2,
+                    "data": [
+                       {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00090.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00091.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00092.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00093.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00094.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00095.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "3",
+                    "type": "images",
+					"carousel": false,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[68],
+					"down":2,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00100.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00101.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00102.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00103.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00104.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00105.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "4",
+                    "type": "images",
+					"carousel": false,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[83,68],
+					"down":2,
+                    "data": [
+                       {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00110.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00111.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00112.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00113.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00114.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00115.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "5",
+                    "type": "images",
+					"carousel": false,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[83],
+					"down":2,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00120.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00121.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00122.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00123.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00124.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00125.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "6",
+                    "type": "images",
+					"carousel": true,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[65,83],
+					"down":2,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00130.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00131.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00132.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00133.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00134.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00135.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "7",
+                    "type": "images",
+					"carousel": true,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[65],
+					"down":2,
+                    "data": [
+                       {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00140.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00141.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00142.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00143.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00144.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00145.png"
+						}
+                    ]
+                },
+                {
+                    "direction": "8",
+                    "type": "images",
+					"carousel": true,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[65,87],
+					"down":2,
+                    "data": [
+                       {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00150.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00151.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00152.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00153.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00154.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00155.png"
+						}
+                    ]
+					
+                }
+            ]
+        },{
+            "name": "gongji",
+            "direction_number": "8",
+			"defaulaction":false,
+			"keys":[75],
+			"down":2,
+            "data": [
+                {
+                    "direction": "1",
+                    "type": "images",
+					"carousel": false,
+					"rate": 15,
+					"defaulaction":true,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[],
+					"down":2,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00160.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00161.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00162.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00163.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00164.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00165.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "2",
+                    "type": "images",
+					"carousel": false,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[],
+					"down":2,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00170.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00171.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00172.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00173.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00174.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00175.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "3",
+                    "type": "images",
+					"carousel": false,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[],
+					"down":2,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00180.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00181.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00182.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00183.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00184.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00185.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "4",
+                    "type": "images",
+					"carousel": false,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[74],
+					"down":1,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00190.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00191.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00192.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00193.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00194.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00195.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "5",
+                    "type": "images",
+					"carousel": false,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[],
+					"down":2,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00200.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00201.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00202.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00203.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00204.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00205.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "6",
+                    "type": "images",
+					"carousel": true,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[],
+					"down":2,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00210.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00211.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00212.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00213.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00214.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00215.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "7",
+                    "type": "images",
+					"carousel": true,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[],
+					"down":2,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00220.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00221.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00222.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00223.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00224.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00225.png"
+						}
+                    ]
+                },
+                {
+                    "direction": "8",
+                    "type": "images",
+					"carousel": true,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[],
+					"down":2,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00230.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00231.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00232.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00233.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00234.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00235.png"
+						}
+                    ]
+					
+                }
+            ]
+        },{
+            "name": "gongji2",
+            "direction_number": "8",
+			"defaulaction":false,
+			"keys":[88],
+			"down":1,
+            "data": [
+                {
+                    "direction": "1",
+                    "type": "images",
+					"carousel": false,
+					"rate": 15,
+					"defaulaction":true,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[],
+					"down":2,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00160.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00161.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00162.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00163.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00164.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00165.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "2",
+                    "type": "images",
+					"carousel": false,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[],
+					"down":2,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00170.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00171.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00172.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00173.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00174.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00175.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "3",
+                    "type": "images",
+					"carousel": false,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[],
+					"down":2,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00180.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00181.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00182.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00183.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00184.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00185.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "4",
+                    "type": "images",
+					"carousel": false,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[74],
+					"down":1,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00190.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00191.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00192.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00193.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00194.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00195.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "5",
+                    "type": "images",
+					"carousel": false,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[],
+					"down":2,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00200.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00201.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00202.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00203.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00204.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00205.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "6",
+                    "type": "images",
+					"carousel": true,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[],
+					"down":2,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00210.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00211.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00212.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00213.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00214.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00215.png"
+						}
+                    ]
+                },
+				{
+                    "direction": "7",
+                    "type": "images",
+					"carousel": true,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[],
+					"down":2,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00220.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00221.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00222.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00223.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00224.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00225.png"
+						}
+                    ]
+                },
+                {
+                    "direction": "8",
+                    "type": "images",
+					"carousel": true,
+					"rate": 15,
+					"defaulaction":false,
+					"collision":0,
+					"collisionproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"mask":0,
+					"maskproperty":{
+						"x":10,
+						"y":10,
+						"width":100,
+						"height":100
+					},
+					"keys":[],
+					"down":2,
+                    "data": [
+                        {
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00230.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00231.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00232.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00233.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00234.png"
+						},
+						{
+							"positionX":30,
+							"positionY":30,
+							"url":"res/test/01/00235.png"
+						}
+                    ]
+					
+                }
+            ]
+        }
+    ]
+}

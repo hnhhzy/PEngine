@@ -7,9 +7,10 @@ import hxPEngine.ui.util.AssetsUtils;
 /**
  * 加载图片解析器
  */
+ @:keep
  class BitmapDataParser extends BaseParser {
 	public static function support(type:String):Bool {
-		return type == "png" || type == "jpg";
+		return type == "png" || type == "jpg" || type == "PNG" || type == "JPG";
 	}
 
 	override function process() {

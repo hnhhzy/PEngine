@@ -1,0 +1,80 @@
+{
+	"role": "1",
+	"scaleX":0.5,
+	"scaleY":0.5,
+	"animation": [{
+		"name": "stil",
+		
+		"data": [{
+			"key": 0,
+			"keys": [],
+			"type": "images",
+			"direction": 1,
+			"data": [{
+				"url": "res/role/1.rule.image/00000.PNG",
+				"positionX": 0,
+				"positionY": 0
+			}, {
+				"url": "res/role/1.rule.image/00001.PNG",
+				"positionX": 0,
+				"positionY": 0
+			}, {
+				"url": "res/role/1.rule.image/00002.PNG",
+				"positionX": 0,
+				"positionY": 0
+			}, {
+				"url": "res/role/1.rule.image/00003.PNG",
+				"positionX": 0,
+				"positionY": 0
+			}],
+			"carousel": true,
+			"rate": 15,
+			"down": 1,
+			"col": 1,
+			"row": 1
+		}, {
+			"key": 1,
+			"keys": [],
+			"type": "images",
+			"direction": 2,
+			"data": [{
+				"url": "res/role/1.rule.image/00010.PNG",
+				"positionX": 0,
+				"positionY": 0
+			}, {
+				"url": "res/role/1.rule.image/00011.PNG",
+				"positionX": 0,
+				"positionY": 0
+			}, {
+				"url": "res/role/1.rule.image/00012.PNG",
+				"positionX": 0,
+				"positionY": 0
+			}, {
+				"url": "res/role/1.rule.image/00013.PNG",
+				"positionX": 0,
+				"positionY": 0
+			}],
+			"carousel": true,
+			"rate": 15,
+			"down": 1
+		}],
+		"defaulaction": true,
+		"defauldirection": 0
+	}, {
+		"name": "Animation 2",
+		"data": [{
+			"key": 0,
+			"keys": [],
+			"type": "images",
+			"direction": 1,
+			"data": [],
+			"carousel": true,
+			"rate": 15,
+			"down": 1
+		}],
+		"defaulaction": false,
+		"defauldirection": 0
+	}],
+	"direction_number": 8,
+	"direction_status": [true, true, true, true, true, true, true, true]
+}

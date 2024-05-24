@@ -18,7 +18,7 @@ package hxPEngine.ui.util;
 
 	/**
 	 * 获取字符串的名字，不带路径、扩展名
-	 * @param data - 
+	 * @param data 
 	 * @return String
 	 */
 	public static function getName(source:String):String {

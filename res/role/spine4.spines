@@ -1,0 +1,9 @@
+{
+	
+    "atlas": "res/role/c_005_kiss/c_005_kiss.atlas",
+	"json": "res/role/c_005_kiss/c_005_kiss.json",
+    "pngs": [
+		"res/role/c_005_kiss/c_005_kiss.png"
+     ],
+	 "loop":false
+}

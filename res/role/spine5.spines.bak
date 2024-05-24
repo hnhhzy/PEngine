@@ -1,0 +1,14 @@
+{
+	
+    "atlas": "res/role/santa/Santa.atlas",
+	"json": "res/role/santa/santa.json",
+    "pngs": [
+		"res/role/santa/Santa.png",
+		"res/role/santa/Santa_2.png"
+     ],
+	 "loop":true,
+	 "scaleX":0.1,
+	 "scaleY":0.1,
+	 "positionX":400,
+	 "positionY":600
+}

@@ -1,0 +1,83 @@
+
+guaiA11aTexture_2.png
+size: 432,124
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+guaiA11a_2/body
+  rotate: false
+  xy: 84, 62
+  size: 81, 62
+  orig: 81, 62
+  offset: 0, 0
+  index: -1
+guaiA11a_2/left hand 1
+  rotate: false
+  xy: 399, 97
+  size: 33, 27
+  orig: 33, 27
+  offset: 0, 0
+  index: -1
+guaiA11a_2/left hand 2
+  rotate: false
+  xy: 298, 49
+  size: 46, 75
+  orig: 46, 75
+  offset: 0, 0
+  index: -1
+guaiA11a_2/left leg
+  rotate: false
+  xy: 47, 2
+  size: 25, 40
+  orig: 25, 40
+  offset: 0, 0
+  index: -1
+guaiA11a_2/right hand1
+  rotate: false
+  xy: 2, 6
+  size: 43, 36
+  orig: 43, 36
+  offset: 0, 0
+  index: -1
+guaiA11a_2/right hand2
+  rotate: false
+  xy: 240, 42
+  size: 56, 82
+  orig: 56, 82
+  offset: 0, 0
+  index: -1
+guaiA11a_2/right leg
+  rotate: false
+  xy: 346, 49
+  size: 31, 45
+  orig: 31, 45
+  offset: 0, 0
+  index: -1
+guaiA11a_2/shanpan xiao
+  rotate: false
+  xy: 2, 44
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+guaiA11a_2/tou
+  rotate: false
+  xy: 167, 52
+  size: 71, 72
+  orig: 71, 72
+  offset: 0, 0
+  index: -1
+guaiA11a_2/xiaba
+  rotate: false
+  xy: 346, 96
+  size: 51, 28
+  orig: 51, 28
+  offset: 0, 0
+  index: -1
+guaiA11a_2/yan
+  rotate: false
+  xy: 84, 50
+  size: 20, 10
+  orig: 20, 10
+  offset: 0, 0
+  index: -1

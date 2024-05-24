@@ -1,5 +1,10 @@
 package hxPEngine.ui.util;
 
+import hxPEngine.ui.res.SpineTextureAtlas;
+import domkit.CssStyle.Rule;
+import hxd.fs.Convert;
+import hxd.poly2tri.Node;
+import hxd.fmt.hmd.Data.Material;
 import hxPEngine.ui.loader.parser.BaseParser;
 import hxPEngine.ui.loader.parser.AssetsType;
 import hxPEngine.ui.loader.parser.AtlasParser;
@@ -82,7 +87,9 @@ class Assets {
 	 */
 	public function loadFile(file:String):Void {
 		var ext = StringUtils.getExtType(file);
+		//trace("loadFile:", file, ext);
 		for (parser in LoaderAssets.fileparser) {
+			//trace("parser:", parser);
 			var bool = parser.callMethod(parser.getProperty("support"), [ext]);
 			if (bool) {
 				_loadlist.push(Type.createInstance(parser, [addRepath(file)]));
@@ -135,7 +142,7 @@ class Assets {
 			pngs[index] = addRepath(value);
 		}
 		atlas = addRepath(atlas);
-		_loadlist.push(new zygame.loader.parser.SpineAtlasParser({
+		_loadlist.push(new hxPEngine.ui.loader.parser.SpineAtlasParser({
 			pngs: pngs,
 			atlas: atlas
 		}));
@@ -345,7 +352,11 @@ class Assets {
 		}
 		return null;
 	}
-
+	/**
+	 * [Description]
+	 * @param id 
+	 * @return h3d.anim.Animation
+	 */
 	public function getHMDAnimation(id:String):h3d.anim.Animation {
 		var hmd = getHMDLibrary(id);
 		if (hmd != null) {
@@ -353,6 +364,195 @@ class Assets {
 		}
 		return null;
 	}
+
+	/**
+	 * 返回HMD 动画集合
+	 * @param id 
+	 * @return Array<hxd.fmt.hmd.Data.Animation>
+	 */
+	public function getHMDAnimationList(id:String):Array<hxd.fmt.hmd.Data.Animation>{
+		var hmd = getHMDLibrary(id);
+		
+		if (hmd != null) {
+			return hmd.header.animations;
+		}
+
+		return null;
+
+
+	}
+
+	/**
+	 * 返回Model集合
+	 * @param id 
+	 * @return Array<hxd.fmt.hmd.Data.Model>
+	 */
+	public function getHMDModelsList(id:String):Array<hxd.fmt.hmd.Data.Model>{
+		var hmd = getHMDLibrary(id);
+		if (hmd != null) {
+			return hmd.header.models;
+		}
+
+		return null;
+	}
+
+	/**
+	 * 返回Material集合
+	 * @param id 
+	 * @return Array<hxd.fmt.hmd.Data.Material>
+	 */
+	public function getHMDMaterialList(id:String):Array<hxd.fmt.hmd.Data.Material>{
+		var hmd = getHMDLibrary(id);
+		if (hmd != null) {
+					//trace(hmd.header.version);
+					// Material mm = new Material();
+					// mm.blendMode = None;
+
+					
+					// if(hasTypeAssets(BITMAP,"I:/Myproject/HeapsPlus/PEngine/res/img/sword01.png")  ){
+					// 	trace(1);
+		
+					// }
+
+					// if(AssetsBuilder.getTexture3D("sword01.png")!=null){
+					// 	trace(2);
+					// }
+					//trace(_loadedData);
+					
+			return hmd.header.materials;
+		}
+
+		return null;
+	}
+
+	public function setHMDMaterialList1(id:String):Void{
+		var hmd = getHMDLibrary(id);
+		if (hmd != null) {
+
+			// var fbx = try hxd.fmt.fbx.Parser.parse(srcBytes) catch( e : Dynamic ) throw Std.string(e) + " in " + srcPath;
+			// var hmdout = new hxd.fmt.fbx.HMDOut("I:\\Myproject\\HeapsPlus\\PEngine\\res\\img\\Model.hmd");
+			// hmdout.load()
+			// trace(hmdout);
+
+			
+			// var url = "I:\\Myproject\\HeapsPlus\\PEngine\\res\\img\\Model.fbx";
+			// var c = new hxPEngine.ui.util.Conver.ConvertFBX2HMDNew();
+			// c.originalFilename = "Model.fbx";
+			// c.srcPath = url;
+			// c.srcBytes = sys.io.File.getBytes(url);
+			// c.dstPath = StringTools.replace(url, "." + StringUtils.getExtType(url), "_new.hmd");			
+			// c.modify(hmd.header);
+			// trace("FBX2HDM:", c.dstPath);
+
+ 			
+			
+
+			
+
+
+		}
+	}
+
+
+
+	public function setHMDMaterialList(id:String, materials:Array<hxd.fmt.hmd.Data.Material>):Void{
+		var hmd = getHMDLibrary(id);
+		if (hmd != null) {
+
+			// var fbx = try hxd.fmt.fbx.Parser.parse(srcBytes) catch( e : Dynamic ) throw Std.string(e) + " in " + srcPath;
+			// var hmdout = new hxd.fmt.fbx.HMDOut("I:\\Myproject\\HeapsPlus\\PEngine\\res\\img\\Model.hmd");
+			// hmdout.load()
+			// trace(hmdout);
+
+			hmd.header.materials = materials;
+			// var url = "I:\\Myproject\\HeapsPlus\\PEngine\\res\\img\\Model.fbx";
+			// var c = new hxPEngine.ui.util.Conver.ConvertFBX2HMDNew();
+			// c.originalFilename = "Model.fbx";
+			// c.srcPath = url;
+			// c.srcBytes = sys.io.File.getBytes(url);
+			// c.dstPath = StringTools.replace(url, "." + StringUtils.getExtType(url), "_new.hmd");			
+			// c.modify(hmd.header);
+			// trace("FBX2HDM:", c.dstPath);
+
+ 			for (i in hmd.header.materials){
+				//trace(StringTools.replace(, "\\", "/"));.
+				trace(getName(i.diffuseTexture));
+				
+				trace(i.normalMap);
+				trace(i.specularTexture);
+				if(isNULL(i.diffuseTexture)){
+					if(AssetsBuilder.getTexture3D(getName(i.diffuseTexture))== null){
+						loadFile(StringTools.replace(i.diffuseTexture, "\\", "/"));
+					}
+					
+				}
+				if(isNULL(i.normalMap)){
+					trace(getName(i.normalMap));
+					trace(StringTools.replace(i.normalMap, "\\", "/"));
+					if(AssetsBuilder.getTexture3D(getName(i.normalMap))== null){
+						loadFile(StringTools.replace(i.normalMap, "\\", "/"));
+					}
+					
+				}
+				if(isNULL(i.specularTexture)){
+					trace(getName(i.specularTexture));
+					trace(StringTools.replace(i.specularTexture, "\\", "/"));
+					if(AssetsBuilder.getTexture3D(getName(i.specularTexture))== null){
+						loadFile(StringTools.replace(i.specularTexture, "\\", "/"));
+					}
+					
+				}
+				
+				
+				
+			}
+			// start(function(f) {
+            //     if (f == 1) {
+			// 		for (i in hmd.header.materials){
+			// 			var obj = loadFbxModel(id);
+			// 			var m = obj.getMaterialByName(i.name);
+			// 			trace(getName(i.diffuseTexture));
+			// 			var tex = AssetsBuilder.getTexture3D(getName(i.diffuseTexture));
+			// 			m.texture = tex;
+			// 		}
+					
+                    
+                    
+            //     }
+            // });
+
+			// var obj = loadFbxModel("Model");
+			// var m = obj.getMaterialByName("Sword01");
+			// //trace(getName(i.diffuseTexture));
+			// var tex = AssetsBuilder.getTexture3D("btn_LvSe");
+			// m.texture = tex;
+
+
+			
+
+
+		}
+	}
+
+	public function isNULL(string:String):Bool{
+		if(string != null && string != ""){
+			return true;
+		}
+		return false;
+	
+
+	}
+	public function getName(name): String{
+        var path = StringTools.replace(name, "\\", "/");
+        var fileName = StringUtils.getName(path);
+        return fileName;
+    }
+
+
+
+
+
+
 
 	/**
 	 * 获取位图瓦片对象
@@ -390,6 +590,14 @@ class Assets {
 	 * @return Dynamic
 	 */
 	public function getJson(id:String):Dynamic {
+		return getTypeAssets(JSON, id);
+	}
+	/**
+	 * 获取JSON对象
+	 * @param id 
+	 * @return Dynamic
+	 */
+	 public function getRule(id:String):Dynamic {
 		return getTypeAssets(JSON, id);
 	}
 
@@ -444,7 +652,7 @@ class Assets {
 	 * @param jsonName 
 	 * @return Spine
 	 */
-	public function createSpine(atlasName:String, jsonName:String):#if spine_hx Spine #else Dynamic #end {
+	public function createSpine(atlasName:String, jsonName:String):#if spine_hx hxPEngine.ui.display.Spine #else Dynamic #end {
 		return this.getSpineAtlas(atlasName).buildSpriteSkeleton(atlasName, this.getJson(jsonName));
 	}
 

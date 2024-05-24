@@ -1,3 +1,6 @@
+import hxd.fmt.hmd.Data.Material;
+import haxe.Json;
+import MainJS.MainApp;
 import h2d.TextInput;
 import h2d.CheckBox;
 import hxPEngine.ui.util.TimeRuntime.Call;
@@ -34,7 +37,41 @@ import h2d.col.Point;
 import hxPEngine.ui.display.TextInput;
 
 class TestUI extends UIWindow {
-    
+    var lal:Label = null;
+    public function setFps(fps:Float,carmer:String,saveInfo:String) {
+        lal.text = "fps:"+Std.int(fps);
+        lal.text += "\r\n";
+
+        // 转换一下carmer，carmer是json
+        var carmerJson = Json.parse(carmer);
+
+        for (field in Reflect.fields(carmerJson.pos)) {
+            var value = Std.string(Reflect.field(carmerJson.pos, field));
+            lal.text += field + ":" + value + "\r\n";
+        }
+        for (field in Reflect.fields(carmerJson.target)) {
+            var value = Std.string(Reflect.field(carmerJson.target, field));
+            lal.text += field + ":" + value + "\r\n";
+        }
+
+        lal.text += "saveinfo" + ":" + saveInfo + "\r\n";
+      //  lal.text += "pos" + ":" + carmerJson.pos + "\r\n";
+       // lal.text += "target" + ":" + carmerJson.target + "\r\n";
+    }
+
+    public static function fromJson(data:Dynamic):Material {
+        var material = new Material();
+        material.props = data.props;
+        material.name = data.name;
+        material.diffuseTexture = data.diffuseTexture;
+        material.blendMode = h2d.BlendMode.None;
+        material.normalMap = data.normalMap;
+        material.specularTexture = data.specularTexture;
+        return material;
+    }
+
+
+
     override function onInit() {
         super.onInit();
         var vbox = new UIEntity(this);        
@@ -73,22 +110,39 @@ class TestUI extends UIWindow {
         //      trace("click!111111");
         // }
 
-        var lal = new Label(vbox);
-        lal.text = "123哈哈";
-        lal.setSize(50);
+        lal = new Label(vbox);
+        lal.text = "fps:60";
+        lal.setSize(20);
         lal.filter = new h2d.filter.Glow(0xff0000, 100, 1);
+        lal.x = 600;
+        lal.y=10;
+
+
 
 
         var assets = new Assets();
 		
 		AssetsBuilder.bindAssets(assets);
+
+        
+		 assets.loadFile("res/role/image0.png");
+		 assets.loadFile("res/role/image1.png");
+		 assets.loadFile("res/role/image2.png");
+		 assets.loadFile("res/role/image3.png");
+		 assets.loadFile("res/role/image4.png");
+		 assets.loadFile("res/role/image5.png");
+         assets.loadFile("res/role/dandan.png");
+         assets.loadFile("res/role/data.json");
+         
+         
 		
 		 assets.loadFile("res/img/btn_LvSe.png");
 		 assets.loadFile("res/img/images.png");
          assets.loadFile("res/img/test.png");
          assets.loadFile("res/img/inventory_button.png");
+         assets.loadFile("res/img/inventory_button.png");
          
-        assets.loadFile("res/img/mc1043.ogg");
+         assets.loadFile("res/img/sword01.png");
 
        // assets.loadFile("res/img/yuan.png");
         assets.start(function(f) {
@@ -101,6 +155,24 @@ class TestUI extends UIWindow {
 
             
             if(f==1) {
+
+
+
+                var t1 = assets.getBitmapDataTile("image0");
+                var t2 = assets.getBitmapDataTile("image1");
+                var t3 = assets.getBitmapDataTile("image2");
+                var t4 = assets.getBitmapDataTile("image3");
+                var t5 = assets.getBitmapDataTile("image4");
+                var t6 = assets.getBitmapDataTile("image5");
+                //var ss = assets.getAtlas("dandan");
+               // var aa = assets.getJson("data");
+                //var anim = new h2d.Anim([t1,t2,t3,t4,t5,t6],vbox); 
+
+
+                // var anim1 = new pengine.loadbyanim("老鼠");
+                // s2d.add(anim1);
+
+
                 // var img = new Image(assets.getBitmapDataTile("images"), vbox);
                 // img.x = 200;
                 // var img1 = new Image(assets.getBitmapDataTile("test"), vbox);
@@ -116,9 +188,49 @@ class TestUI extends UIWindow {
 				button1.label.setColor(0x0);
                 button1.onClick = function(btn, e) {
                     trace("click!111111");
+                    //MainJS.load('');
                     //assets.getSound("mc1043").play(true);
+                   // MainJS.load('I:\\Myproject\\HeapsPlus\\PEngine\\res\\img\\Model.fbx');
+                    var json = '[{"props": null, "name": "Sword01", "diffuseTexture": "res/img/sss.jpg", "blendMode": "None", "normalMap": null, "specularTexture": null},{"props": null, "name": "Skeleton01", "diffuseTexture": "res/img/sss.jpg", "blendMode": "Alpha", "normalMap": null, "specularTexture": null}]';
+                     var materials = Json.parse(json).map(function(data) return fromJson(data));
+
+                    MainJS.setHMDMaterialList(materials);
+                    //setinit('I:\\Myproject\\HeapsPlus\\PEngine\\res\\img\\Model.fbx');
                     
                 }
+
+                var button2:Button = Button.create("images", null, vbox);
+                button2.text = "嘻嘻嘻";
+                button2.width = 250;
+                button2.x = 0;
+                //button1.label.setSize(101);
+                button2.label.setSize(20);
+				button2.label.setColor(0x0);
+                button2.onClick = function(btn, e) {
+                    trace("click!111111");
+                    //MainJS.load('');
+                    //assets.getSound("mc1043").play(true);
+                   // MainJS.load('I:\\Myproject\\HeapsPlus\\PEngine\\res\\img\\Model.fbx');
+                   RoleJS.load('I:\\Myproject\\HeapsPlus\\PEngine\\res\\role\\aa4.rule');
+                    
+                }
+
+
+
+                var button3:Button = Button.create("images", null, vbox);
+                button3.text = "更换装备";
+                button3.width = 250;
+                button3.x = 400;
+                //button1.label.setSize(101);
+                button3.label.setSize(20);
+				button3.label.setColor(0x0);
+                button3.onClick = function(btn, e) {
+                    //MainJS.changeE();
+                    RoleJS.PlayAnimation("pao","4");
+                    trace("click!333");
+                    
+                }
+
 
 
                 
@@ -167,47 +279,47 @@ class TestUI extends UIWindow {
                 input.y = 300;
 
 
-                 var down = new DownListView(new ButtonSkin("ui1","ui2"),this);
-                 down.dataProvider = new ArrayCollection(["哈哈","哎哎哎","嘻嘻嘻"]);
+                //  var down = new DownListView(new ButtonSkin("ui1","ui2"),this);
+                //  down.dataProvider = new ArrayCollection(["哈哈","哎哎哎","嘻嘻嘻"]);
                  
-                 down.width = 100;
-                 down.height = 70;
-                 down.y = 300;
-                 down.x = 400;
+                //  down.width = 100;
+                //  down.height = 70;
+                //  down.y = 300;
+                //  down.x = 400;
                  //down.selectedIndex = 0;
 
 
                  
                 
 
-                var listview = new ListView(this);
-                listview.x = 500;
-                listview.width = 800;
-                listview.height = 700;
-                listview.top = 20;
-                listview.bottom = 20;
-                listview.left = 30;
+                // var listview = new ListView(this);
+                // listview.x = 500;
+                // listview.width = 800;
+                // listview.height = 700;
+                // listview.top = 20;
+                // listview.bottom = 20;
+                // listview.left = 30;
 
-                //listview.layout = new VerticalListLayout();
-                var ss = new VirualFlowListLayout();
-                ss.gapX = 20;
-                ss.gapY = 20;
-                listview.layout =ss;
+                // //listview.layout = new VerticalListLayout();
+                // var ss = new VirualFlowListLayout();
+                // ss.gapX = 20;
+                // ss.gapY = 20;
+                // listview.layout =ss;
                 
-                // 数据
-                listview.dataProvider = new ArrayCollection([
-                    for (i in 0...50) {
-                        i;
-                    }
-                ]);
+                // // 数据
+                // listview.dataProvider = new ArrayCollection([
+                //     for (i in 0...50) {
+                //         i;
+                //     }
+                // ]);
 
-                // 自定义渲染器
-                listview.itemRendererRecycler = ObjectRecycler.withClass(CustomItemRenderer);
-                // 禁止溢出滑动
-                listview.enableOutEasing = true;
-                listview.addEventListener(Event.CHANGE, function(e) {
-                    trace("我选中的内容是:", listview.selectedItem, "索引是", listview.selectedIndex);
-                });
+                // // 自定义渲染器
+                // listview.itemRendererRecycler = ObjectRecycler.withClass(CustomItemRenderer);
+                // // 禁止溢出滑动
+                // listview.enableOutEasing = true;
+                // listview.addEventListener(Event.CHANGE, function(e) {
+                //     trace("我选中的内容是:", listview.selectedItem, "索引是", listview.selectedIndex);
+                // });
 
 
                 // var view = new ScrollView(this);

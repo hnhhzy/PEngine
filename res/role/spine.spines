@@ -1,0 +1,9 @@
+{
+	
+    "atlas": "res/role/guaiA11a_2/guaiA11a.atlas",
+	"json": "res/role/guaiA11a_2/guaiA11a.json",
+    "pngs": [
+		"res/role/guaiA11a_2/guaiA11a.png"
+     ],
+	 "loop":false
+}

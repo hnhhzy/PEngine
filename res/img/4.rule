@@ -1,0 +1,111 @@
+{
+    "role": "老鼠",
+    "animation": [
+        {
+            "name": "zou",
+            "direction_number": "2",
+			"defaulaction":true,
+            "data": [
+			
+               
+                {
+                    "src": "res/role/dandan.png",
+                    "type": "segmentation",
+                    "direction": "2",
+					"carousel": true,
+					"rate": 15,
+					"defaulaction":false,
+					"keys":[],
+					"down":2,
+                    "data": [
+                        {
+							"x":0,
+							"y":0,
+							"width":391,
+							"height":428
+						},
+						{
+							"x":391,
+							"y":0,
+							"width":391,
+							"height":428
+						},
+						{
+							"x":782,
+							"y":0,
+							"width":391,
+							"height":428
+						},
+						{
+							"x":0,
+							"y":428,
+							"width":391,
+							"height":428
+						},
+						{
+							"x":391,
+							"y":428,
+							"width":391,
+							"height":428
+						},
+						{
+							"x":782,
+							"y":428,
+							"width":391,
+							"height":428
+						}
+                    ]
+                },
+				{
+                    "src": "res/role/dandan2.png",
+                    "type": "segmentation",
+                    "direction": "3",
+					"carousel": true,
+					"rate": 15,
+					"defaulaction":false,
+					"keys":[],
+					"down":2,
+                    "data": [
+                        {
+							"x":0,
+							"y":0,
+							"width":391,
+							"height":428
+						},
+						{
+							"x":391,
+							"y":0,
+							"width":391,
+							"height":428
+						},
+						{
+							"x":782,
+							"y":0,
+							"width":391,
+							"height":428
+						},
+						{
+							"x":0,
+							"y":428,
+							"width":391,
+							"height":428
+						},
+						{
+							"x":391,
+							"y":428,
+							"width":391,
+							"height":428
+						},
+						{
+							"x":782,
+							"y":428,
+							"width":391,
+							"height":428
+						}
+                    ]
+                }
+            ]
+        }
+        
+    ]
+}

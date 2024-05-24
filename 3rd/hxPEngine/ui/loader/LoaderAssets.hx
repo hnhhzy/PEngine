@@ -3,6 +3,7 @@ package hxPEngine.ui.loader;
 import hxPEngine.ui.loader.parser.BaseParser;
 import hxPEngine.ui.loader.parser.BitmapDataParser;
 import hxPEngine.ui.loader.parser.JSONDataParser;
+import hxPEngine.ui.loader.parser.RULEDataParser;
 import hxPEngine.ui.loader.parser.SoundParser;
 import hxPEngine.ui.loader.parser.HMDParser;
 import hxPEngine.ui.loader.parser.XMLDataParser;
@@ -19,6 +20,7 @@ import hxPEngine.ui.loader.parser.BytesDataParser;
 		BitmapDataParser,
 		XMLDataParser,
 		JSONDataParser,
+		RULEDataParser,
 		SoundParser,
 		HMDParser,
 		BytesDataParser // SparticleParser,

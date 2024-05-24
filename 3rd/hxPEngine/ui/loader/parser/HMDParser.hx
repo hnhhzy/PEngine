@@ -14,8 +14,19 @@ class HMDParser extends BaseParser {
 	private var _setName:String = null;
 
 	public static function support(type:String):Bool {
+		if(type==null){
+			return false;
+		}
 		var ext = type.toLowerCase();
 		return ext == "fbx" || ext == "hmd";
+	}
+
+	public function toHmd(m:Model) : hxd.fmt.hmd.Library {
+		var fs = m.entry.open();
+		//var hmd = new hxd.fmt.hmd.Reader(fs).readHeader(true);
+		var hmd = new hxd.fmt.hmd.Reader(fs).read();
+		fs.close();
+		return new hxd.fmt.hmd.Library(m, hmd);
 	}
 
 	override function process() {
@@ -28,6 +39,8 @@ class HMDParser extends BaseParser {
 			var fs = new BytesFileEntry(path, data);
 			var m = new Model(fs);
 			var hmd = m.toHmd();
+			//var hmd = toHmd(m);
+		
 			// 解析这里的所有图片
 			var rootName = getName();
 			var rootPath = path.substr(0, path.lastIndexOf("/") + 1);
@@ -51,7 +64,7 @@ class HMDParser extends BaseParser {
 			}
 			if (pngs.length > 0) {
 				for (file in pngs) {
-					var parser = new HMDTextureParser(rootPath + file);
+           			var parser = new HMDTextureParser(rootPath + file);
 					parser.assetsId = file;
 					assets.loadParser(parser);
 				}

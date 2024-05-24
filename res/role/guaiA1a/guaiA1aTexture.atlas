@@ -1,0 +1,62 @@
+
+guaiA1aTexture.png
+size: 502,117
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+guaiA1a/beimian
+  rotate: false
+  xy: 2, 2
+  size: 125, 115
+  orig: 125, 115
+  offset: 0, 0
+  index: -1
+guaiA1a/jiao1
+  rotate: false
+  xy: 161, 11
+  size: 29, 34
+  orig: 29, 34
+  offset: 0, 0
+  index: -1
+guaiA1a/jiao2
+  rotate: false
+  xy: 129, 8
+  size: 30, 37
+  orig: 30, 37
+  offset: 0, 0
+  index: -1
+guaiA1a/jiao3
+  rotate: false
+  xy: 358, 63
+  size: 71, 54
+  orig: 71, 54
+  offset: 0, 0
+  index: -1
+guaiA1a/jiao4
+  rotate: false
+  xy: 431, 63
+  size: 71, 54
+  orig: 71, 54
+  offset: 0, 0
+  index: -1
+guaiA1a/shenti
+  rotate: false
+  xy: 129, 47
+  size: 139, 70
+  orig: 139, 70
+  offset: 0, 0
+  index: -1
+guaiA1a/yan
+  rotate: false
+  xy: 270, 48
+  size: 43, 19
+  orig: 43, 19
+  offset: 0, 0
+  index: -1
+guaiA1a/ye
+  rotate: false
+  xy: 270, 69
+  size: 86, 48
+  orig: 86, 48
+  offset: 0, 0
+  index: -1

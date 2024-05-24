@@ -1,23 +1,46 @@
 -cp src
 -cp 3rd
+-cp res
 -lib heaps
--lib hlsdl
+#-lib hlsdl
 #-lib hldx
 -lib domkit
 -lib actuate
+-lib spine-hx
+-lib ldtk-haxe-api
+-lib deepnightLibs
+#-lib electron
+-D resourcesPath=res/_assets
+-D resourcesPath=res/maps
+#--dce full
+-D hl-check
+
+#-D resourcesPath=res/_assets
+#--dce full
 
 #-lib hxnodejs
 
+#-D MAX_MEM=4096
 
 #--macro domkit.Macros.checkCSS('res/style.css')
 
--hl PEngine.hl
-# -js PEngine.js
+#-hl PEngine.hl
+#-js PEngine.js
+#-js _javascript.js
 
 #-main Main
--main MainJS
+#-main MainJS
+-main RoleJS
+#-main Map2d
+#-main SpineJS
 #-main Domkit
+#-main module.MainHX
+#-D windowSize=1366x768
 -D windowSize=1366x768
+#-D webname=spinejs
+-D webname=rolejs
+#-D webname=mainjs
+#-D editor
 
 
 

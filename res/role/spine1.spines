@@ -1,0 +1,9 @@
+{
+	
+    "atlas": "res/role/guaiA12ds_1/guaiA12ds.atlas",
+	"json": "res/role/guaiA12ds_1/guaiA12ds.json",
+    "pngs": [
+		"res/role/guaiA12ds_1/guaiA12ds.png"
+     ],
+	 "loop":false
+}

@@ -1,0 +1,139 @@
+{
+    "role": "老鼠",
+    "animation": [
+        {
+            "name": "zou",
+            "direction_number": "2",
+            "data": [
+                {
+                    "direction": "1",
+                    "type": "images",
+                    "data": [
+                        "res/role/00000.png",
+                        "res/role/00001.png",
+                        "res/role/00002.png",
+                        "res/role/00003.png"
+                    ]
+                },
+                {
+                    "src": "res/role/dandan.png",
+                    "type": "segmentation",
+                    "direction": "2",
+                    "data": [
+                        {
+							"x":0,
+							"y":0,
+							"width":391,
+							"height":428
+						},
+						{
+							"x":391,
+							"y":0,
+							"width":391,
+							"height":428
+						},
+						{
+							"x":782,
+							"y":0,
+							"width":391,
+							"height":428
+						},
+						{
+							"x":0,
+							"y":428,
+							"width":391,
+							"height":428
+						},
+						{
+							"x":391,
+							"y":428,
+							"width":391,
+							"height":428
+						},
+						{
+							"x":782,
+							"y":428,
+							"width":391,
+							"height":428
+						}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "tiao",
+            "direction_number": "2",
+            "data": [
+                {
+                    "direction": "1",
+                    "type": "images",
+                    "data": [
+                        "res/role/image7.png",
+                        "res/role/image8.png",
+                        "res/role/image9.png"
+                    ]
+                },
+				{
+                    "direction": "3",
+                    "type": "images",
+                    "data": [
+                        "res/role/00191.png",
+						"res/role/00192.png",
+						"res/role/00193.png",
+						"res/role/00194.png",
+						"res/role/00195.png"
+                    ]
+                },
+				{
+                    "direction": "4",
+                    "type": "images",
+                    "data": [
+                        "res/role/00110.png",
+						"res/role/00111.png",
+						"res/role/00112.png",
+						"res/role/00113.png",
+						"res/role/00114.png",
+						"res/role/00115.png"
+                    ]
+                },
+				{
+                    "direction": "5",
+                    "type": "images",
+                    "data": [
+                        "res/role/00090.PNG",
+						"res/role/00091.PNG",
+						"res/role/00092.PNG",
+						"res/role/00093.PNG",
+						"res/role/00094.PNG",
+						"res/role/00095.PNG"
+                    ]
+                },
+                {
+                    "src": "res/role/dandan1.png",
+                    "type": "segmentation",
+                    "direction": "2",
+                    "data": [
+                        {
+							"x":0,
+							"y":0,
+							"width":391,
+							"height":428
+						},
+						{
+							"x":391,
+							"y":0,
+							"width":391,
+							"height":428
+						},
+						{
+							"x":782,
+							"y":0,
+							"width":391,
+							"height":428
+						}
+                    ]
+                }
+            ]
+        }
+    ]
+}
